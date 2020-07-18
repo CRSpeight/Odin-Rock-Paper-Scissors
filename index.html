@@ -4,66 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Project - Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script>
-      function computerPlay() {
-        const results = ["rock", "paper", "scissors"];
-        let randomChoice = Math.floor(Math.random() * 3);
-        return results[randomChoice];
-      }
+    <div class="container">
+      <div class="player">Player Score</div>
+      <div class="computer">Computer Score</div>
+      <div id="message">TEST</div>
+      <button id="rock" data-key="test">Rock</button>
+      <button id="paper">Paper</button>
+      <button id="scissors">Scissors</button>
+    </div>
 
-      function playRound(playerSelection, computerSelection) {
-        playerSelection = playerSelection.toLowerCase();
-        if (playerSelection == computerSelection) {
-          console.log(
-            "It's a tie between " +
-              playerSelection +
-              " and " +
-              computerSelection
-          );
-          return "tie";
-        } else if (
-          (playerSelection == "rock" && computerSelection == "scissors") ||
-          (playerSelection == "paper" && computerSelection == "rock") ||
-          (playerSelection == "scissors" && playerSelection == "paper")
-        ) {
-          console.log(
-            "You win! " + playerSelection + " beats " + computerSelection
-          );
-          return "win";
-        } else {
-          console.log(
-            "You lose! " + computerSelection + " beats " + playerSelection
-          );
-          return "lose";
-        }
-      }
-
-      function game() {
-        let currentRound = 1;
-        let playerPoints = 0;
-        let computerPoints = 0;
-
-        while (currentRound <= 5) {
-          const playerSelection = window.prompt("Rock, paper, or scissors?");
-          const computerSelection = computerPlay();
-          let roundResult = playRound(playerSelection, computerSelection);
-          if (roundResult == "win") {
-            playerPoints += 1;
-          } else if (roundResult == "lose") {
-            computerPoints += 1;
-          }
-          currentRound += 1;
-        }
-
-        const winner =
-          playerPoints > computerPoints ? "Player wins" : "Computer wins";
-        console.log(winner);
-        console.log("Player: " + playerPoints + ". Computer " + computerPoints);
-      }
-
-      game();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+.container {
+  background-color: aqua;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "player player player computer computer computer"
+    "message message message message message message"
+    "rock rock paper paper scissors scissors";
+}
+
+#rock {
+  grid-area: rock;
+}
+
+#paper {
+  grid-area: paper;
+}
+
+#scissors {
+  grid-area: scissors;
+}
+
+#message {
+  grid-area: message;
+  text-align: center;
+}
+
+.player {
+  grid-area: player;
+  text-align: center;
+}
+
+.computer {
+  grid-area: computer;
+  text-align: center;
+}
