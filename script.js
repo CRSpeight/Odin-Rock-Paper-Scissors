@@ -3,7 +3,7 @@ const CHOICES = ['rock', 'paper', 'scissors'];
 game(5);
 
 function game(numberOfRounds){
-    for (let i = 0; i < 5; i++){
+    for (let i = 0; i < numberOfRounds; i++){
         const playerSelection = prompt('Enter your selection');
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
