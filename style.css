@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.buttonContainer {
+  padding-top: 25px;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+}
+
+button {
+  width: 25vw;
+  max-width: 200px;
+  height: 25vw;
+  max-height: 200px;
+  font-weight: bold;
+  background-color: #fca311;
+  border-color: black;
+  border-radius: 15px;
+  border-width: 4px;
+  font-size: larger;
+}
+
+button:hover {
+  background-color: #e5e5e5;
+}
+
+body {
+  background-color: #14213d;
+  color: #e5e5e5;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.header {
+  background-color: #e5e5e5;
+  color: black;
+  padding: 15px;
+}
