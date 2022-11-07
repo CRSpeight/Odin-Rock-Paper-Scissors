@@ -1,14 +1,19 @@
 const CHOICES = ["rock", "paper", "scissors"];
 
-// game(5);
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log(playRound(button.id, getComputerChoice()));
+  });
+});
 
-function game(numberOfRounds) {
-  for (let i = 0; i < numberOfRounds; i++) {
-    const playerSelection = prompt("Enter your selection");
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-  }
-}
+// function game(numberOfRounds) {
+//   for (let i = 0; i < numberOfRounds; i++) {
+//     const playerSelection = prompt("Enter your selection");
+//     const computerSelection = getComputerChoice();
+//     console.log(playRound(playerSelection, computerSelection));
+//   }
+// }
 
 function playRound(playerSelection, computerSelection) {
   let playerChoice = playerSelection.toLowerCase();
