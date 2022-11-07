@@ -3,17 +3,18 @@ const CHOICES = ["rock", "paper", "scissors"];
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    console.log(playRound(button.id, getComputerChoice()));
+    let result = playRound(button.id, getComputerChoice());
+    displayResult(result);
   });
 });
 
-// function game(numberOfRounds) {
-//   for (let i = 0; i < numberOfRounds; i++) {
-//     const playerSelection = prompt("Enter your selection");
-//     const computerSelection = getComputerChoice();
-//     console.log(playRound(playerSelection, computerSelection));
-//   }
-// }
+function displayResult(message) {
+  const result = document.querySelector("#result");
+  const newContent = document.createElement("div");
+  newContent.textContent = message;
+  result.innerHTML = "";
+  result.appendChild(newContent);
+}
 
 function playRound(playerSelection, computerSelection) {
   let playerChoice = playerSelection.toLowerCase();
